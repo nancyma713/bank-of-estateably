@@ -6,7 +6,7 @@ const app = express();
 import db from './config/keys';
 import bodyParser from 'body-parser';
 import users from './routes/api/users';
-import transactions from './routes/api/transactions';
+// import transactions from './routes/api/transactions';
 
 app.get("/", (req, res) => res.send("Hello World!!!"));
 
@@ -26,4 +26,4 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use("/api/users", users);
-app.use("/api/transactions", transactions);
+// app.use("/api/transactions", transactions);
