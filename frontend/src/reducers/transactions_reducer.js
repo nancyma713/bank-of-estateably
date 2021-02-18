@@ -13,10 +13,9 @@ const transactionReducer = (state = initialState, action) => {
         case RECEIVE_TRANSACTION:
             let transaction = {
                 id: action.transaction.data._id,
-                amount: action.transaction.data.amount,
-                interest_rate: action.transaction.data.interest_rate,
-                loan_length: action.transaction.data.loan_length,
-                monthly_payment: action.transaction.data.monthly_payment
+                category: action.transaction.data.category,
+                description: action.transaction.data.description,
+                value: action.transaction.data.value
             };
             nextState.data.push(transaction);
             return nextState;

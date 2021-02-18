@@ -4,12 +4,12 @@ import validText from './valid-text';
 function validateTransactionInput(data) {
     let errors = {};
 
-    data.type = validText(data.type) ? data.type : "";
+    data.category = validText(data.category) ? data.category : "";
     data.description = validText(data.description) ? data.description : "";
     data.value = validText(data.value) ? data.value : "";
 
-    if (Validator.isEmpty(data.type)) {
-        errors.type = "Type field is required";
+    if (Validator.isEmpty(data.category)) {
+        errors.category = "Category field is required";
     }
 
     if (Validator.isEmpty(data.description)) {

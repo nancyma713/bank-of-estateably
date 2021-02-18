@@ -6,7 +6,7 @@ import MainPage from './main/main_page';
 import NavBarContainer from './nav/navbar_container';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
-// import TransactionsContainer from './gift/transactions_container';
+import TransactionsContainer from './transactions/transactions_container';
 
 const App = () => (
     <div>
@@ -16,7 +16,7 @@ const App = () => (
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
 
-            {/* <ProtectedRoute exact path="/transactions" component={TransactionsContainer} /> */}
+            <ProtectedRoute exact path="/transactions" component={TransactionsContainer} />
         </Switch>
     </div>
 );

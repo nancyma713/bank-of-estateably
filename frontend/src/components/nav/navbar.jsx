@@ -42,7 +42,7 @@ class NavBar extends React.Component {
     render() {
         return (
             <div className='nav-container'>
-                <div className='home'><Link to='/'><h1>TransBank</h1></Link></div>
+                <div className='home'><Link to='/'><h1>Bank of Estateably</h1></Link></div>
                 <div className='links'>
                     {this.getLinks()}
                 </div>

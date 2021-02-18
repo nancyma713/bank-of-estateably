@@ -6,7 +6,7 @@ const TransactionSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
-    type: {
+    category: {
         type: String,
         required: true
     },

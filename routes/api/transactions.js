@@ -16,7 +16,7 @@ router.get('/:userId', (req, res) => {
         .then(transactions => res.json(
             transactions.map(transaction => {
                 return {
-                    type: transaction.type,
+                    category: transaction.category,
                     description: transaction.description,
                     value: transaction.value,
                     id: transaction.id,
@@ -42,7 +42,7 @@ router.post('/new',
         }
 
         const newTransaction = new Transaction({
-            type: req.body.type,
+            category: req.body.category,
             description: req.body.description,
             value: req.body.value,
             userId: req.user.id
