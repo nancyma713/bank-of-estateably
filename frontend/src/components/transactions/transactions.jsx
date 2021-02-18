@@ -43,7 +43,7 @@ class Transaction extends React.Component {
         </table>
 
         return (
-            <div>
+            <div className="transaction-container">
                 <div className="transaction-compose">
                     <TransactionCompose createTransaction={this.props.createTransaction} clearErrors={this.props.clearErrors} />
                 </div>

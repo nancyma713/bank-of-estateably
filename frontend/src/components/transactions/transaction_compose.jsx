@@ -15,9 +15,9 @@ class TransactionCompose extends React.Component {
         this.handleCreateTransaction = this.handleCreateTransaction.bind(this);
     }
 
-    componentWillUnmount() {
-        this.props.clearErrors();
-    }
+    // componentWillUnmount() {
+    //     this.props.clearErrors();
+    // }
 
     renderErrors(field) {
         if (this.props.errors) {
@@ -57,7 +57,7 @@ class TransactionCompose extends React.Component {
                 <form onSubmit={this.handleCreateTransaction}>
                     <div className="transaction-inputs">
                         <label>
-                            Type:
+                            Type: 
                             <select name="category" id="category-input" onChange={this.update('category')}>
                                 <option value="" disabled selected>-- Select transaction type --</option>
                                 <option value="Salary">Salary</option>

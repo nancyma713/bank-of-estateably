@@ -6,7 +6,7 @@ class MainPage extends React.Component {
         return (
             <div className='main-page'>
                 <h1>Bank of Estateably</h1>
-                <h2>Manage your transactions here!</h2>
+                <h2>Manage your transactions!</h2>
                 <div><Link className="main-links" to="/signup">Sign Up</Link></div>
                 <div><Link className="main-links" to="/login">Log In</Link></div>
             </div>

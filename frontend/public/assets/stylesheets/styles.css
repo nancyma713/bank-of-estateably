@@ -15,4 +15,246 @@ th, a, dl, dt, dd, nav, time {
 }
 
 /* Main */
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0 20px;
+  background-color: rgb(215, 234, 252);
+}
 
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  margin: auto;
+  width: 300px;
+  border: 5px solid black;
+  border-radius: 50px;
+  background-color: white;
+}
+
+.main-page h1 {
+  margin-bottom: 20px;
+  color: black;
+}
+
+.main-page h2 {
+  margin-bottom: 20px;
+  color: rgb(41, 41, 146);
+  text-align: center;
+}
+
+.main-page div {
+  margin: 15px 0;
+}
+
+.main-links {
+  margin: 5px;
+  color: white;
+  font-weight: bold;
+  padding: 10px 30px;
+  background-color: rgb(100, 155, 103);
+  border-radius: 15px;
+}
+
+.main-links:hover {
+  background-color: rgb(102, 184, 102);
+  transition: 0.5s;
+}
+
+/* NavBar */
+
+.nav-container {
+  display: flex;
+  border-bottom: 1px solid black;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 5px;
+}
+
+.home h1 {
+  background-color: rgb(162, 214, 162);
+  border-radius: 30px;
+  color: black;
+  font-family: cursive;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.home h1:hover {
+  box-shadow: 1px 1px 5px grey;
+  transition: 0.15s;
+}
+
+.home:hover {
+  cursor: pointer;
+}
+
+.links div {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  color: rgb(100, 155, 103);
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+}
+
+.nav-link:hover {
+  color: grey;
+  transition: 0.5s;
+}
+
+/* Session */
+.session-form {
+  text-align: center;
+  border: 5px solid green;
+  border-radius: 50px;
+  width: 400px;
+  padding: 20px;
+  margin: auto;
+  background-color: white;
+}
+
+.session-form h1 {
+  margin: 20px;
+}
+
+.session-form input {
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+}
+
+.submit-buttons button {
+  padding: 10px;
+  margin: 10px;
+  width: 20%;
+  color: white;
+  background-color: rgb(100, 155, 103);
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.submit-buttons button:hover {
+  cursor: pointer;
+  background-color: rgb(102, 184, 102);
+  transition: 0.5s;
+}
+
+.session-form input:focus {
+  border: 1px solid green;
+}
+
+#redirect {
+  color: blue;
+  cursor: pointer;
+}
+
+#session-errors {
+  color: red;
+  font-size: 10px;
+}
+
+/* Transaction Compose */
+.transaction-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-compose-page {
+  margin: auto;
+  padding: 15px;
+  border: 3px solid green;
+  border-radius: 20px;
+  width: 400px;
+  background-color: white;
+}
+
+.transaction-compose-page form {
+  text-align: center;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+.transaction-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-inputs > label {
+  margin: 5px 3px;
+}
+
+#category-input {
+  padding: 3px;
+  border: 1px solid black;
+  margin-left: 5px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#value-input {
+    width: 50px;
+}
+
+input {
+  padding: 3px;
+  border: 1px solid black;
+  margin-left: 5px;
+}
+
+input:focus {
+  border: 1px solid green;
+}
+
+.submit-transaction {
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  width: 100px;
+  background: rgb(100, 155, 103);
+  border-radius: 15px;
+  font-weight: bold;
+  margin: 10px auto;
+}
+
+.submit-transaction:hover {
+  cursor: pointer;
+  background: rgb(102, 184, 102);
+  transition: 0.5s;
+}
+
+#transaction-errors {
+  color: red;
+  font-size: 10px;
+}
+
+/* Transactions Table */
+.transaction-table {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+table {
+  background-color: white;
+  width: 60%;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+  transition: 0.2s;
+}
