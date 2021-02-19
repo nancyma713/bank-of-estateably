@@ -236,6 +236,29 @@ input:focus {
   font-size: 10px;
 }
 
+/* Transaction Filter */
+.transaction-filter {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.transaction-filter button {
+  background-color: rgb(100, 155, 103);
+  color: white;
+  margin-left: 5px;
+  padding: 3px;
+}
+
+.transaction-filter button:hover {
+  cursor: pointer;
+  background: rgb(102, 184, 102);
+  transition: 0.5s;
+}
+
+#value-search {
+  width: 50px;
+}
+
 /* Transactions Table */
 .transaction-table {
   display: flex;

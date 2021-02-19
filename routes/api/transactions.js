@@ -11,6 +11,26 @@ router.get('/', (req, res) => {
         .catch(err => res.status(404).json({ notransactionfound: 'No transaction found' }));
 });
 
+router.get('/filter/:userId/:category', (req, res) => {
+    Transaction.find({ userId: req.params.userId, category: req.params.category })
+        .then(transactions => res.json(transactions))
+        .catch(err => res.status(404).json({ notransactionfound: 'No transactions found' }));
+});
+
+router.get('/descsearch/:userId/:searchTerm', (req, res) => {
+    const searchTerm = new RegExp(["^.*", req.params.searchTerm, ".*$"].join(""), "i");
+    Transaction.find({ userId: req.params.userId, description: searchTerm })
+        .then(transactions => res.json(transactions))
+        .catch(err => res.status(404).json({ notransactionfound: 'No transactions found' }));
+});
+
+router.get('/valuesearch/:userId/:valueAmt', (req, res) => {
+    const valueAmt = parseInt(req.params.valueAmt);
+    Transaction.find({ userId: req.params.userId, value: valueAmt })
+        .then(transactions => res.json(transactions))
+        .catch(err => res.status(404).json({ notransactionfound: 'No transactions found' }));
+});
+
 router.get('/:userId', (req, res) => {
     Transaction.find({ userId: req.params.userId })
         .then(transactions => res.json(

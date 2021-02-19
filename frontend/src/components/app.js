@@ -7,6 +7,7 @@ import NavBarContainer from './nav/navbar_container';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import TransactionsContainer from './transactions/transactions_container';
+// import TransactionComposeContainer from './transactions/transaction_compose_container';
 
 const App = () => (
     <div>
@@ -17,6 +18,7 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
 
             <ProtectedRoute exact path="/transactions" component={TransactionsContainer} />
+            {/* <ProtectedRoute exact path="/new" component={TransactionComposeContainer} /> */}
         </Switch>
     </div>
 );

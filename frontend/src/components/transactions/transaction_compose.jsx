@@ -15,9 +15,9 @@ class TransactionCompose extends React.Component {
         this.handleCreateTransaction = this.handleCreateTransaction.bind(this);
     }
 
-    // componentWillUnmount() {
-    //     this.props.clearErrors();
-    // }
+    componentWillUnmount() {
+        this.props.clearErrors();
+    }
 
     renderErrors(field) {
         if (this.props.errors) {
@@ -37,13 +37,13 @@ class TransactionCompose extends React.Component {
             value: this.state.value
         };
 
-        this.props.createTransaction(transaction);
-        this.setState({
+        this.props.createTransaction(transaction)
+        .then(this.setState({
             transactionId: "",
             category: "",
             description: "",
             value: ""
-        });
+        }));
     }
 
     update(field) {
@@ -58,8 +58,8 @@ class TransactionCompose extends React.Component {
                     <div className="transaction-inputs">
                         <label>
                             Type: 
-                            <select name="category" id="category-input" onChange={this.update('category')}>
-                                <option value="" disabled selected>-- Select transaction type --</option>
+                            <select value={this.state.category} name="category" id="category-input" onChange={this.update('category')}>
+                                <option value="" disabled selected>-- Select category --</option>
                                 <option value="Salary">Salary</option>
                                 <option value="Food">Food</option>
                                 <option value="Transport">Transport</option>

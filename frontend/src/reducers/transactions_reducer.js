@@ -1,4 +1,4 @@
-import { RECEIVE_TRANSACTIONS, RECEIVE_TRANSACTION, } from '../actions/transaction_actions';
+import { RECEIVE_TRANSACTIONS, RECEIVE_TRANSACTION, RECEIVE_FILTERED_TRANSACTIONS, RECEIVE_SEARCH_TRANSACTIONS } from '../actions/transaction_actions';
 
 const initialState = { data: [] };
 
@@ -18,6 +18,12 @@ const transactionReducer = (state = initialState, action) => {
                 value: action.transaction.data.value
             };
             nextState.data.push(transaction);
+            return nextState;
+        case RECEIVE_FILTERED_TRANSACTIONS:
+            nextState = action.transactionsFiltered;
+            return nextState;
+        case RECEIVE_SEARCH_TRANSACTIONS:
+            nextState = action.transactionsSearch;
             return nextState;
         default:
             return state;
